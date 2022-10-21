@@ -7,12 +7,12 @@ from sklearn.metrics import accuracy_score, recall_score, f1_score
 from sklearn.model_selection import train_test_split
 
 from feat_sel_config import config
-from masterthesis_appendix_code.constants.defintions import (
+from masterthesis_appendix_code.constants.definitions import (
     FEATURE_DIR, LABEL_PATH, FEATURE_SELECTOR, CLASSIFIER,
     TRAIN_IDS, TEST_IDS, RESULT_FILENAME, CLASSIFIER_DIR
 )
-from masterthesis_appendix_code.helper import build_label_and_feature_array, filter_features
-from masterthesis_appendix_code.constants.selection_methods import FilterFeatureSelector, FeatureSelector, \
+from helper import build_label_and_feature_array, filter_features
+from selection_methods import FilterFeatureSelector, FeatureSelector, \
     WrapperFeatureSelector
 from feature_selection_methods import select_features, select_features_RFE
 import feature_selection

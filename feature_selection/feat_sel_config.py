@@ -2,8 +2,8 @@ import os
 
 from sklearn.ensemble import RandomForestClassifier
 
-from masterthesis_appendix_code.constants.selection_methods import FeatureSelector
-from masterthesis_appendix_code.constants.defintions import (
+from selection_methods import FeatureSelector
+from masterthesis_appendix_code.constants.definitions import (
     FEATURE_DIR, LABEL_PATH, FEATURE_SELECTOR, NUMBER_OF_FEATURES_TO_SELECT, CLASSIFIER, TRAIN_IDS, TEST_IDS,
     RESULT_FILENAME, CLASSIFIER_DIR
 )

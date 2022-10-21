@@ -5,8 +5,8 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score
 from skopt.space import Integer, Real
-from masterthesis_appendix_code.helper import build_label_and_feature_array, filter_features
-from masterthesis_appendix_code.constants.defintions import (
+from helper import build_label_and_feature_array, filter_features
+from masterthesis_appendix_code.constants.definitions import (
     NUMBER_OF_FEATURES_TO_SELECT, LABEL_PATH, FEATURE_DIR, TRAIN_IDS, TEST_IDS, FEATURE_LIST_FILENAME, CLASSIFIER,
     CLASSIFIER_DIR
 )
@@ -33,10 +33,8 @@ data = train_features.values
 # define search space
 params = dict()
 params['n_estimators'] = Integer(100, 1000)
-# params['max_depth'] = Integer(3, 30)
-# params['min_samples_split'] = Integer(2,3)
 params['min_samples_leaf'] = Integer(20, 100)
-# params['max_features'] = Integer(1,2)
+
 # define evaluation
 cv = RepeatedStratifiedKFold(n_splits=5, n_repeats=10, random_state=42)
 # define the search
@@ -47,12 +45,6 @@ search.fit(train_features, train_labels)
 # report the best result
 best_params:dict = search.best_params_
 print(best_params)
-
-
-# add other necessary params for estimator
-# best_params:dict = {}
-# best_params["n_estimators"] = 639
-# best_params["min_samples_leaf"] = 20
 
 # put params in results dict
 result_dict = {}

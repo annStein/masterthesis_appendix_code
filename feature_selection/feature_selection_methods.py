@@ -8,12 +8,11 @@ from skfeature.function.similarity_based import fisher_score
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_selection import SelectKBest, f_classif, RFECV
 from sklearn.model_selection import StratifiedKFold
-from masterthesis_appendix_code.constants.defintions import (
+from masterthesis_appendix_code.constants.definitions import (
     CLASSIFIER_DIR
 )
 from feat_sel_config import config
-
-from masterthesis_appendix_code.constants.selection_methods import FeatureSelector
+from selection_methods import FeatureSelector
 
 
 def select_features(

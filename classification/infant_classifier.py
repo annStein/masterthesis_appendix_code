@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 
 
 def get_true_labels_per_infant(test_id_per_label, results):

@@ -2,10 +2,10 @@ from sklearn.model_selection import train_test_split
 
 from feat_sel_config import config
 import pandas as pd
-from masterthesis_appendix_code.constants.defintions import (
+from masterthesis_appendix_code.constants.definitions import (
     FEATURE_SELECTOR, LABEL_PATH, FEATURE_DIR, TRAIN_IDS, CLASSIFIER
 )
-from masterthesis_appendix_code.helper import  build_label_and_feature_array
+from helper import  build_label_and_feature_array
 from feature_selection_methods import select_features
 
 def run_feat_sel():
